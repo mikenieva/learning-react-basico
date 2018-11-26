@@ -20,7 +20,7 @@ Si quieres ver el demo, puedes [acceder aquí](https://mikenieva.github.io/react
 `$ npm start`
 
 
-## Conceptos a aprender durante el proyecto
+## Conceptos que aprenderás durante el proyecto
  - Instalación y estructura
  - Árbol de Componentes
  - JSX
@@ -34,6 +34,11 @@ Si quieres ver el demo, puedes [acceder aquí](https://mikenieva.github.io/react
 
 ## Iteración 1: Instalación y creación de Header
 
+Lo primero a realizar es la creación de una aplicación en React.
+
+Para esto, recuerda que debes de tener instalado 
+
+
 ## Iteración 2: Cuenta regresiva
 
 ## Iteración 3: Venue e información
@@ -42,4 +47,58 @@ Si quieres ver el demo, puedes [acceder aquí](https://mikenieva.github.io/react
 
 ## Iteración 5: Footer
 
-## Iteración 6: Despliegue (Deploy)
+## Iteración 6: Despliegue en GitHub Pages (Deploy)
+
+Para realizar el despliegue de tu proyecto, deberás:
+
+1. Instalar la librería gh-pages a través de tu terminal
+
+`$ npm install gh-pages --save-dev`
+
+Recuerda que el `--save-dev` implica que es una dependencia de sólo tu ambiente de desarrollo.
+
+2. Agregarás en tu archivo `package.json` en el nivel más alto:
+
+~~~~
+//...
+"homepage": "http://TUCUENTAGITHUB.github.io/TUPROYECTO"
+~~~~
+
+Recuerda que en "TUCUENTAGITHUB" lo sustituirás por el nombre de tu cuenta en GitHub. En mi caso sería "mikenieva".
+
+En la parte de "TUPROYECTO" se refiere al nombre del repositorio en GitHub. En mi caso, el nombre es "react-basico".
+
+1. Dentro de tu `package.json`, deberás buscar la propiedad "scripts" y dentro de la misma le colocarás dos propiedades con su valor respectivo:
+
+~~~~
+"scripts": {
+  //...
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
+~~~~
+
+Recuerda inicializar Git dentro de tu proyecto.
+
+~~~~
+git init
+~~~~
+
+Conectarte remotamente al repositorio, puede ser vía SSH o HTTPS, en este caso lo haremos con la segunda:
+
+~~~~
+$ git remote add origin https://github.com/TUCUENTAGITHUB/TUPROYECTO.git
+~~~~
+
+Corremos el comando:
+
+`$ npm run deploy`
+
+Y listo. Accede a tu página. 
+
+NOTA: Si obtienes un error, agrega la diagonal (/) a tu dirección web al final para que no te muestre un error 404.
+
+Ejemplo:
+
+👎 https://gitname.github.io/react-gh-pages 
+✅ https://gitname.github.io/react-gh-pages/
