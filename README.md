@@ -193,7 +193,7 @@ class App extends Component {
 
 ~~~~
 
-Ahora que están conectados, podemos renderizarlo a través de la palabra <Header/>
+Ahora que están conectados, podemos renderizarlo a través de la palabra `<Header/>`
 
 Coloquémoslo dentro de `App.js`
 
@@ -215,8 +215,15 @@ class App extends Component {
 
 Si observamos el navegador, deberemos obtener la palabra "header", de esta forma:
 
-
 ![Hello](./docs/header.png)
+
+[Noviembre 2018]: En caso de error o problema con la librería de Material UI y babel, puedes correr este comando:
+
+~~~~
+$ yarn add @babel/runtime@7.0.0-beta.55
+~~~~
+
+Link de referencia [aquí.](https://github.com/creativetimofficial/ct-material-kit-pro-react/issues/3)
 
 ****
 
