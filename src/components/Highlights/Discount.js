@@ -11,7 +11,6 @@ class Discount extends Component {
         discountEnd:30
     }
 
-
     porcentage = () => {
         if(this.state.discountStart < this.state.discountEnd){
             this.setState({
@@ -25,7 +24,6 @@ class Discount extends Component {
             this.porcentage()
         },30)
     }
-
 
     render() {
         return (
@@ -43,14 +41,14 @@ class Discount extends Component {
                     
                     <Slide right>
                         <div className="discount_description">
-                            <h3>Purchase tickets before 20th JUNE</h3>
+                            <h3>Purchase tickets before 20th DEC</h3>
                             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
                         
                             <MyButton
                                 text="Purchase tickets"
                                 bck="#ffa800"
                                 color="#ffffff"
-                                link="http://google.com"
+                                link="https://www.songkick.com/artists/7738429-kygo"
                             />
                         
                         </div>

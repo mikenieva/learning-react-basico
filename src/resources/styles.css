@@ -111,6 +111,12 @@ footer .footer_copyright {
 .artist_name .wrapper h1 {
     color: black;
     margin: 0;
+    font-size: 50px;
+}
+
+.artist_name .wrapper p {
+    font-size: 22px;
+    color: black;
 }
 
 /*====================

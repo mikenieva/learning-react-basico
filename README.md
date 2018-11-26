@@ -98,3 +98,9 @@ Ejemplo:
 👎 https://mikenieva.github.io/react-basico
 
 ✅ https://mikenieva.github.io/react-basico/
+
+
+# Recursos adicionales
+
+- Documentación oficial de ReactJS
+- Curso de React.js en Platzi
