@@ -114,7 +114,7 @@ Con esto, obtenemos en el navegador el mensaje de "hello":
 ---
 
 
-Para la creación del Header, vamos a entrar a App.js y agregaremos:
+Para la creación del Header, vamos a entrar a `App.js` y agregaremos:
 
 
 **App.js**
@@ -154,7 +154,7 @@ import IconButton from '@material-ui/core/IconButton';
 export default Header
 ~~~~
 
-Si observamos bien, `export default Header` no tiene una función o clase con el cual esté conectado. Por ello que crearemos nuestro primer componente basado en Clase (Class based Components).
+Si observamos bien, `export default Header` no tiene una función o clase con el cual esté conectado. Para ello, crearemos nuestro primer componente basado en Clase (Class based Components).
 
 **Header.js**
 ~~~~
