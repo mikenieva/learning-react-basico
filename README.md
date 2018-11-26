@@ -38,11 +38,11 @@ Si quieres ver el demo, puedes [acceder aquí](https://mikenieva.github.io/react
 
 `$ create-react-app kygolanding`
 
-2. Revisamos con `npm start` si el proyecto levanta exitosamente. Si todo bien, seguimos.
+2. Revisamos con `yarn start` si el proyecto levanta exitosamente. Si todo bien, continuamos.
 
 Instalaremos estas librerías adicionales:
 
-`npm install @material-ui/core@1.2.0 @material-ui/icons@1.1.0`
+`yarn add @material-ui/core@1.2.0 @material-ui/icons@1.1.0`
 
  En ella incluimos:
 
