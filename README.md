@@ -2,7 +2,6 @@
 
 En este proyecto, nos introduciremos en React. Una de las librerías más populares para desarrollar interfaces de usuario y construcción de componentes.
 
-
 ## Sobre el proyecto
 
 Construiremos una página de aterrizaje para un artista llamado Kygo. Para ello, deberás completar todas las iteraciones.
@@ -19,7 +18,6 @@ Si quieres ver el demo, puedes [acceder aquí](https://mikenieva.github.io/react
 
 `$ yarn start`
 
-
 ## Conceptos que aprenderás o repasarás durante el proyecto
  - Instalación y estructura (yarn, create-react-app)
  - Árbol de Componentes
@@ -30,7 +28,6 @@ Si quieres ver el demo, puedes [acceder aquí](https://mikenieva.github.io/react
  - Eventos
  - “State”
  - Ciclo de vida “componentDidMount”
-
 
 ## Iteración 1: Instalación y creación de Header
 
