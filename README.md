@@ -50,7 +50,7 @@ Lo que estamos instalando son componentes React que implementan "Google Material
 
 ---
 
-3. Agregaremos una carpeta llamada "resources" dentro del proyecto, dentro de "src". Puedes [descargarla aquí](https://www.google.com). Esta incluirá:
+3. Agregaremos una carpeta llamada "resources" dentro del proyecto, dentro de "src". Puedes [descargarla aquí](https://github.com/mikenieva/react-basico/raw/master/docs/resources.zip). Esta incluirá:
 
 - styles.css
 - images
