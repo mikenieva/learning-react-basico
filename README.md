@@ -20,8 +20,8 @@ Si quieres ver el demo, puedes [acceder aquí](https://mikenieva.github.io/react
 `$ npm start`
 
 
-## Conceptos que aprenderás durante el proyecto
- - Instalación y estructura
+## Conceptos que aprenderás o repasarás durante el proyecto
+ - Instalación y estructura (NPM, create-react-app)
  - Árbol de Componentes
  - JSX
  - “Functional Components”
@@ -33,6 +33,74 @@ Si quieres ver el demo, puedes [acceder aquí](https://mikenieva.github.io/react
 
 
 ## Iteración 1: Instalación y creación de Header
+
+1. Crea una aplicación con `create-react-app`
+
+`$ create-react-app kygolanding`
+
+2. Revisamos con `npm start` si el proyecto levanta exitosamente. Si todo bien, seguimos.
+
+Instalaremos estas librerías adicionales:
+
+`npm install @material-ui/core@1.2.0 @material-ui/icons@1.1.0`
+
+ En ella incluimos:
+
+- Material UI Core
+- Material UI Icons
+
+Ahora, agregaremos una carpeta llamada "resources" dentro del proyecto. Esta incluirá:
+
+a) styles.css
+b) images
+
+Vamos a borrar los archivos dentro de `src`:
+
+- App.css
+- App.test.js
+- index.css
+- logo.svg
+- registerServiceWorker.js
+
+Y, nos quedaremos únicamente con:
+
+src
+|- resources
+|- App.js
+|- index.js
+
+Y, vamos a eliminar líneas que ya no necesitaremos. Dentro de index.js, nos quedamos con:
+
+~~~~
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
+ReactDOM.render(<App />, document.getElementById('root'));
+~~~~
+
+Y en App.js:
+
+~~~~
+import React, { Component } from 'react';
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        hello
+      </div>
+    );
+  }
+}
+
+export default App;
+~~~~
+
+Con esto, obtenemos en el navegador el mensaje de "hello":
+
+![Image of Yaktocat](./docs/hello.png)
+
 
 ## Iteración 2: Cuenta regresiva
 
