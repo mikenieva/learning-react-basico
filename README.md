@@ -34,11 +34,6 @@ Si quieres ver el demo, puedes [acceder aquí](https://mikenieva.github.io/react
 
 ## Iteración 1: Instalación y creación de Header
 
-Lo primero a realizar es la creación de una aplicación en React.
-
-Para esto, recuerda que debes de tener instalado 
-
-
 ## Iteración 2: Cuenta regresiva
 
 ## Iteración 3: Venue e información
@@ -94,11 +89,12 @@ Corremos el comando:
 
 `$ npm run deploy`
 
-Y listo. Accede a tu página. 
+Y listo. Accede a tu primer proyecto de React en producción. 
 
 NOTA: Si obtienes un error, agrega la diagonal (/) a tu dirección web al final para que no te muestre un error 404.
 
 Ejemplo:
 
-👎 https://gitname.github.io/react-gh-pages 
-✅ https://gitname.github.io/react-gh-pages/
+👎 https://mikenieva.github.io/react-basico
+
+✅ https://mikenieva.github.io/react-basico/
