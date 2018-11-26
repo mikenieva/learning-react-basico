@@ -13,15 +13,15 @@ Si quieres ver el demo, puedes [acceder aquí](https://mikenieva.github.io/react
 2. Situarte en la carpeta del proyecto, dentro de tu terminal.
 3. Instalar todos las dependencias del proyecto, a través del comando en terminal:
 
-`$ npm install`
+`$ yarn install`
 
 4. Correr el proyecto:
 
-`$ npm start`
+`$ yarn start`
 
 
 ## Conceptos que aprenderás o repasarás durante el proyecto
- - Instalación y estructura (NPM, create-react-app)
+ - Instalación y estructura (yarn, create-react-app)
  - Árbol de Componentes
  - JSX
  - “Functional Components”
@@ -281,7 +281,7 @@ Para realizar el despliegue de tu proyecto, deberás:
 
 1. Instalar la librería gh-pages a través de tu terminal
 
-`$ npm install gh-pages --save-dev`
+`$ yarn add gh-pages --save-dev`
 
 Recuerda que el `--save-dev` implica que es una dependencia de sólo tu ambiente de desarrollo.
 
@@ -301,7 +301,7 @@ En la parte de "TUPROYECTO" se refiere al nombre del repositorio en GitHub. En m
 ~~~~
 "scripts": {
   //...
-  "predeploy": "npm run build",
+  "predeploy": "yarn run build",
   "deploy": "gh-pages -d build"
 }
 ~~~~
@@ -320,7 +320,7 @@ $ git remote add origin https://github.com/TUCUENTAGITHUB/TUPROYECTO.git
 
 Corremos el comando:
 
-`$ npm run deploy`
+`$ yarn run deploy`
 
 Y listo. Accede a tu primer proyecto de React en producción. 
 
