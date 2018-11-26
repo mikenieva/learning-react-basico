@@ -109,7 +109,7 @@ export default App;
 
 Con esto, obtenemos en el navegador el mensaje de "hello":
 
-![Image of Yaktocat](./docs/hello.png)
+![Hello](./docs/hello.png)
 
 ---
 
@@ -219,7 +219,7 @@ class App extends Component {
 Si observamos el navegador, deberemos obtener la palabra "header", de esta forma:
 
 
-[IMAGEN]
+![Hello](./docs/header.png)
 
 ****
 
@@ -261,6 +261,8 @@ Observa cómo están armados.
 - Utilizamos "className" en lugar de "class" para declarar las clases CSS. Esto porque "class" ya está apartado para las clases de Javascript.
 
 Con esto, deberías obtener al final este resultado.
+
+![Hello](./docs/kygo1.png)
 
 En la siguiente iteración, resolveremos la "Cuenta Regresiva" del proyecto. 👍
 
