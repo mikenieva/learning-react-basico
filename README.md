@@ -51,12 +51,16 @@ Instalaremos estas librerías adicionales:
 
 Lo que estamos instalando son componentes React que implementan "Google Material Design".
 
-Ahora, agregaremos una carpeta llamada "resources" dentro del proyecto, dentro de "src". Puedes [descargarla aquí](https://www.google.com). Esta incluirá:
+---
 
-a) styles.css
-b) images
+3. Agregaremos una carpeta llamada "resources" dentro del proyecto, dentro de "src". Puedes [descargarla aquí](https://www.google.com). Esta incluirá:
 
-Vamos a borrar los archivos dentro de `src`:
+- styles.css
+- images
+
+---
+
+4. Vamos a borrar los archivos dentro de `src`:
 
 - App.css
 - App.test.js
@@ -66,13 +70,16 @@ Vamos a borrar los archivos dentro de `src`:
 
 Y, nos quedaremos únicamente con:
 
+~~~~
 src
 |- resources
 |- App.js
 |- index.js
+~~~~
 
-Y, vamos a eliminar líneas que ya no necesitaremos. Dentro de index.js, nos quedamos con:
+Ahora, eliminamos las líneas que ya no necesitaremos porque sus dependencias fueron borradas. Dentro de `index.js`, nos quedamos con:
 
+**index.js**
 ~~~~
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -81,8 +88,9 @@ import App from './App';
 ReactDOM.render(<App />, document.getElementById('root'));
 ~~~~
 
-Y en App.js:
+Y en `App.js`:
 
+**App.js**
 ~~~~
 import React, { Component } from 'react';
 
@@ -103,6 +111,9 @@ Con esto, obtenemos en el navegador el mensaje de "hello":
 
 ![Image of Yaktocat](./docs/hello.png)
 
+---
+
+
 Para la creación del Header, vamos a entrar a App.js y agregaremos:
 
 
@@ -117,17 +128,21 @@ Con esto, crearemos una carpeta llamada `components` dentro de `src` y dentro de
 
 Así debería quedarte:
 
+~~~~
 src
 |-components
 |   |-header_footer
 |   |     |-Header.js
-
-Atención a la mayúsucula. Es buena práctica colocar en mayúsculas los archivos de tus componentes, excepto index.js
-
-Dentro de Header.js, agregaremos el módulo de React y Component de su librería pricipal, los componentes de Google Material Design, que envolverán a los componentes creados por ti y pondremos al final la línea para habilitar su disponibilidad a otros componentes, a través del nombre "Header".
-
 ~~~~
 
+Atención a la mayúsucula. 
+
+Es buena práctica colocar en mayúsculas los archivos de tus componentes, excepto index.js
+
+Dentro de `Header.js`, agregaremos el módulo de "React" y "{Component}" de "react", los componentes de Google Material Design que envolverán a los componentes creados por ti y finalmente, pondremos la línea para habilitar su disponibilidad a otros componentes, a través del nombre "Header".
+
+**Header.js**
+~~~~
 import React, { Component } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 // Habilitamos para su uso dentro de este componente a Toolbar, MenuIcon, IconButton
@@ -137,14 +152,12 @@ import IconButton from '@material-ui/core/IconButton';
 
 // Creamos la disponibilidad del componente
 export default Header
-
 ~~~~
-
 
 Si observamos bien, `export default Header` no tiene una función o clase con el cual esté conectado. Por ello que crearemos nuestro primer componente basado en Clase (Class based Components).
 
+**Header.js**
 ~~~~
-
 import React, { Component } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -164,17 +177,15 @@ class Header extends Component {
 }
 
 export default Header
-
 ~~~~
 
+---
 
-Ahora que hemos creado nuestro primer componente, debemos conectarlo con el componente padre, que es `App.js`.
+Ahora que hemos creado nuestro primer componente, debemos conectarlo con el padre, que es `App.js`.
 
 Iremos al archivo y colocaremos:
 
-
-**App,js**
-
+**App.js**
 ~~~~
 ...
 // Agregamos esta línea
@@ -210,6 +221,7 @@ Si observamos el navegador, deberemos obtener la palabra "header", de esta forma
 
 [IMAGEN]
 
+****
 
 Para finalizar, agregaremos dentro de Header.js la renderización de los componentes de Google Material Design.
 
@@ -250,7 +262,7 @@ Observa cómo están armados.
 
 Con esto, deberías obtener al final este resultado.
 
-En la siguiente iteración, resolveremos la Cuenta Regresiva del proyecto.
+En la siguiente iteración, resolveremos la "Cuenta Regresiva" del proyecto. 👍
 
 
 ## Iteración 2: Cuenta regresiva
