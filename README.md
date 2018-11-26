@@ -49,7 +49,9 @@ Instalaremos estas librerías adicionales:
 - Material UI Core
 - Material UI Icons
 
-Ahora, agregaremos una carpeta llamada "resources" dentro del proyecto. Esta incluirá:
+Lo que estamos instalando son componentes React que implementan "Google Material Design".
+
+Ahora, agregaremos una carpeta llamada "resources" dentro del proyecto, dentro de "src". Puedes [descargarla aquí](https://www.google.com). Esta incluirá:
 
 a) styles.css
 b) images
@@ -101,10 +103,159 @@ Con esto, obtenemos en el navegador el mensaje de "hello":
 
 ![Image of Yaktocat](./docs/hello.png)
 
+Para la creación del Header, vamos a entrar a App.js y agregaremos:
+
+
+**App.js**
+~~~~
+import React, { Component } from 'react';
+//Esta línea ↓
+import './resources/styles.css';
+~~~~
+
+Con esto, crearemos una carpeta llamada `components` dentro de `src` y dentro de la misma, `header_footer`. incluyendo un archivo llamado `Header.js`.
+
+Así debería quedarte:
+
+src
+|-components
+|   |-header_footer
+|   |     |-Header.js
+
+Atención a la mayúsucula. Es buena práctica colocar en mayúsculas los archivos de tus componentes, excepto index.js
+
+Dentro de Header.js, agregaremos el módulo de React y Component de su librería pricipal, los componentes de Google Material Design, que envolverán a los componentes creados por ti y pondremos al final la línea para habilitar su disponibilidad a otros componentes, a través del nombre "Header".
+
+~~~~
+
+import React, { Component } from 'react';
+import AppBar from '@material-ui/core/AppBar';
+// Habilitamos para su uso dentro de este componente a Toolbar, MenuIcon, IconButton
+import Toolbar from '@material-ui/core/Toolbar';
+import MenuIcon from '@material-ui/core/Menu';
+import IconButton from '@material-ui/core/IconButton';
+
+// Creamos la disponibilidad del componente
+export default Header
+
+~~~~
+
+
+Si observamos bien, `export default Header` no tiene una función o clase con el cual esté conectado. Por ello que crearemos nuestro primer componente basado en Clase (Class based Components).
+
+~~~~
+
+import React, { Component } from 'react';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import MenuIcon from '@material-ui/core/Menu';
+import IconButton from '@material-ui/core/IconButton';
+
+class Header extends Component {
+
+  render(){
+    return (
+      <div>
+        Header
+      </div>
+    )
+  }
+
+}
+
+export default Header
+
+~~~~
+
+
+Ahora que hemos creado nuestro primer componente, debemos conectarlo con el componente padre, que es `App.js`.
+
+Iremos al archivo y colocaremos:
+
+
+**App,js**
+
+~~~~
+...
+// Agregamos esta línea
+import Header from './components/header_footer/Header';
+
+class App extends Component {
+...
+
+~~~~
+
+Ahora que están conectados, podemos renderizarlo a través de la palabra <Header/>
+
+Coloquémoslo dentro de `App.js`
+
+~~~~
+...
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        // Renderizamos el componente Header
+        <Header/>
+      </div>
+    );
+  }
+}
+...
+
+~~~~
+
+Si observamos el navegador, deberemos obtener la palabra "header", de esta forma:
+
+
+[IMAGEN]
+
+
+Para finalizar, agregaremos dentro de Header.js la renderización de los componentes de Google Material Design.
+
+**Header.js**
+~~~~
+class Header extends Component {
+    render() {
+        return(
+            <AppBar 
+                position="fixed"
+                style={{
+                    backgroundColor: '#2f2f2f',
+                    boxShadow: 'none',
+                    padding: '10px 0px'
+                }}
+            >
+                <Toolbar>
+                    <div className="header_logo">
+                        <div className="header_logo_venue">
+                            KYGO
+                        </div>
+                        <div className="header_logo_title">
+                            Feel the vibe
+                        </div>
+                    </div>
+                </Toolbar>
+            </AppBar>
+        )
+    }
+}
+~~~~
+
+Observa cómo están armados.
+
+- Tienen una etiqueta de apertura y una etiqueta de cierre.
+- El formato de sus propiedades y valores. En "style" puedes observar como se utilizan dos llaves. Esto sucede porque admitimos que usaremos Javascript y luego dentro declararemos un objeto.
+- Utilizamos "className" en lugar de "class" para declarar las clases CSS. Esto porque "class" ya está apartado para las clases de Javascript.
+
+Con esto, deberías obtener al final este resultado.
+
+En la siguiente iteración, resolveremos la Cuenta Regresiva del proyecto.
+
 
 ## Iteración 2: Cuenta regresiva
 
-## Iteración 3: Venue e información
+## Iteración 3: Venue
 
 ## Iteración 4: Precios
 
