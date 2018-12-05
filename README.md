@@ -137,21 +137,24 @@ Atención a la mayúsucula.
 
 Es buena práctica colocar en mayúsculas los archivos de tus componentes, excepto index.js
 
-Dentro de `Header.js`, agregaremos el módulo de "React" y "{Component}" de "react", los componentes de Google Material Design que envolverán a los componentes creados por ti y finalmente, pondremos la línea para habilitar su disponibilidad a otros componentes, a través del nombre "Header".
+### 4.1. Dependencias de React, Material UI. Disponibilidad del componente al exterior
 
-> **Header.js**
-> - Habilitaremos Toolbar, MenuIcon, IconButton
-> - Crearemos la disponibilidad del componente
+> ./src/header_footer/Header.js
+> 1. Agregaremos el módulo de _React_, _{Component}_ de la librería _react_
+> 2. Habilitaremos Toolbar, MenuIcon, IconButton importados de _Material Ui_
+> 3. Crearemos la disponibilidad del componente
 ```javascript
 import React, { Component } from 'react';
 import AppBar from '@material-ui/core/AppBar';
-// Habilitamos para su uso dentro de este componente a Toolbar, MenuIcon, IconButton
+// <1>
 import Toolbar from '@material-ui/core/Toolbar';
 import MenuIcon from '@material-ui/core/Menu';
 import IconButton from '@material-ui/core/IconButton';
+// </1>
 
-// Creamos la disponibilidad del componente
+// <2>
 export default Header
+// </2>
 ```
 
 Si observamos bien, `export default Header` no tiene una función o clase con el cual esté conectado. Para ello, crearemos nuestro primer componente basado en Clase (Class based Components).
