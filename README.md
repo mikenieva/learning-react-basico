@@ -139,22 +139,26 @@ Es buena práctica colocar en mayúsculas los archivos de tus componentes, excep
 
 ### 4.1. Dependencias de React, Material UI. Disponibilidad del componente al exterior
 
-> ./src/header_footer/Header.js
+> _./src/header_footer/**Header.js**_
 > 1. Agregaremos el módulo de _React_, _{Component}_ de la librería _react_
-> 2. Habilitaremos Toolbar, MenuIcon, IconButton importados de _Material Ui_
+> 2. Habilitaremos _Appbar, Toolbar, MenuIcon, IconButton_ importados de _Material Ui_
 > 3. Crearemos la disponibilidad del componente
+
 ```javascript
-import React, { Component } from 'react';
-import AppBar from '@material-ui/core/AppBar';
 // <1>
-import Toolbar from '@material-ui/core/Toolbar';
-import MenuIcon from '@material-ui/core/Menu';
-import IconButton from '@material-ui/core/IconButton';
+import React, { Component } from 'react';
 // </1>
 
 // <2>
-export default Header
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import MenuIcon from '@material-ui/core/Menu';
+import IconButton from '@material-ui/core/IconButton';
 // </2>
+
+// <3>
+export default Header
+// </3>
 ```
 
 Si observamos bien, `export default Header` no tiene una función o clase con el cual esté conectado. Para ello, crearemos nuestro primer componente basado en Clase (Class based Components).
