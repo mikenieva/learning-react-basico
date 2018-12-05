@@ -115,7 +115,7 @@ Para la creación del Header, vamos a entrar a `App.js` y agregaremos:
 
 
 > **App.js**
-> Agregamos la línea de estilos
+> - Agregamos la línea de estilos
 ```javascript
 import React, { Component } from 'react';
 import './resources/styles.css';
