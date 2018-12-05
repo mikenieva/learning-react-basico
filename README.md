@@ -115,7 +115,8 @@ Para la creación del Header, vamos a entrar a `App.js` y agregaremos:
 
 
 > **App.js**
-> - Agregamos la línea de estilos
+> - Importamos la línea de estilos
+> - Crearemos una carpeta inmediatamente después
 ```javascript
 import React, { Component } from 'react';
 import './resources/styles.css';
@@ -138,8 +139,10 @@ Es buena práctica colocar en mayúsculas los archivos de tus componentes, excep
 
 Dentro de `Header.js`, agregaremos el módulo de "React" y "{Component}" de "react", los componentes de Google Material Design que envolverán a los componentes creados por ti y finalmente, pondremos la línea para habilitar su disponibilidad a otros componentes, a través del nombre "Header".
 
-**Header.js**
-~~~~
+> **Header.js**
+> - Habilitaremos Toolbar, MenuIcon, IconButton
+> - Crearemos la disponibilidad del componente
+```javascript
 import React, { Component } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 // Habilitamos para su uso dentro de este componente a Toolbar, MenuIcon, IconButton
@@ -149,7 +152,7 @@ import IconButton from '@material-ui/core/IconButton';
 
 // Creamos la disponibilidad del componente
 export default Header
-~~~~
+```
 
 Si observamos bien, `export default Header` no tiene una función o clase con el cual esté conectado. Para ello, crearemos nuestro primer componente basado en Clase (Class based Components).
 
