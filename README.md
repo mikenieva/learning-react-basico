@@ -114,12 +114,12 @@ Con esto, obtenemos en el navegador el mensaje de "hello":
 Para la creación del Header, vamos a entrar a `App.js` y agregaremos:
 
 
-**App.js**
-~~~~
+> **App.js**
+> Agregamos la línea de estilos
+```javascript
 import React, { Component } from 'react';
-//Esta línea ↓
 import './resources/styles.css';
-~~~~
+```
 
 Con esto, crearemos una carpeta llamada `components` dentro de `src` y dentro de la misma, `header_footer`. incluyendo un archivo llamado `Header.js`.
 
